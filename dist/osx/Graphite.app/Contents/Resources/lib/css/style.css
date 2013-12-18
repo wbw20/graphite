@@ -1,12 +1,19 @@
-body {
-  background-color: #F0F0F0;
-}
-
-div.nav {
+.menu {
   background-color: #d8d8d8;
   height: 60px;
   width: 500px;
   margin: 30px auto 0px auto;
+}
+
+.menu > div {
+  width: 25%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+.menu > div h5 {
+  margin-top: 20px;
 }
 
 .light {
