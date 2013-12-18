@@ -1,5 +1,18 @@
+body {
+  background-color: #F0F0F0;
+}
+
 div.nav {
-  background-color: red;
-  height: 100px;
-  width: 200px;
+  background-color: #d8d8d8;
+  height: 60px;
+  width: 500px;
+  margin: 30px auto 0px auto;
+}
+
+.light {
+  color: #F0F0F0;
+}
+
+.dark {
+  color: #d8d8d8;
 }
