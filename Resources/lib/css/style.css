@@ -16,6 +16,10 @@ body {
   text-align: center;
 }
 
+.menu div:hover {
+  background-color: #e0e0e0;
+}
+
 .menu * {
   cursor: pointer;
 }
