@@ -1,10 +1,10 @@
-#appname:TideSDK KitchenSink
-#appid:org.tidesdk.kitchensink
-#publisher:Christian
+#appname:Graphite
+#appid:com.carbonorigins.graphite
+#publisher:Carbon Origins
 #image:tidesdk-tide-shape.png
-#url:http://tidesdk.org
+#url:http://www.carbonorigins.com
 #guid:b621e97a-26d8-48ed-b9d9-2511e7f4cc4d
-#desc:No description provided
+#desc:Desktop Interface for the Graphite Computer.
 #type:desktop
 runtime:1.3.1-beta
 app:1.3.1-beta

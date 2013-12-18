@@ -1,6 +1,5 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<ti:app xmlns:ti='http://ti.appcelerator.org'>
-<!-- These values are edited/maintained by TiDev Community -->
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+
 <id>com.carbonorigins.graphite</id>
 <name>Graphite</name>
 <version>0.1</version>
@@ -9,7 +8,7 @@
 <icon>tidesdk-tide-shape.png</icon>
 <copyright>2013 Carbon Origins</copyright>
 <analytics>false</analytics>
-<!-- Window Definition - these values can be edited -->
+
 <window>
 <id>initial</id>
 <title>Graphite</title>
