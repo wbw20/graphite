@@ -1,23 +1,12 @@
-/**
- * Bootstrap Sidebar Menu
- * ======================
- * The Sidebar Menu is based upon the Twitter Bootstrap 2.1 Accordion.
- * You can place the sidebar menu, well - in your application sidebar :)
- * It supports single items and item groups.
- *
- * @author Christian Engel <hello@wearekiss.com>
- * @version 1
- */
-define(['text!./sidebar-menu/base.html', 'text!./sidebar-menu/group.html', 'text!./sidebar-menu/single.html'], function(tpl_src_base, tpl_src_group, tpl_src_single){
-    var tpl_base = _.template(tpl_src_base),
-        tpl_group = _.template(tpl_src_group),
-        tpl_single = _.template(tpl_src_single);
+define(['text!./grid/item.html'], function(item) {
+    var tpl_item = _.template(item);
 
     /**
-     * Will create the HTML for a sidebar menu.
+     * Will create the HTML
      * @param json
      */
-    function render(json){
+    function render(json) {
+        console.log(json);
         var menu_id = 'mod_sidebar_menu_' + Math.random().toString().split('.').pop();
         var content = '';
 
@@ -34,7 +23,7 @@ define(['text!./sidebar-menu/base.html', 'text!./sidebar-menu/group.html', 'text
         return tpl_base({id: menu_id, content: content});
     }
 
-    function Constructor(menu){
+    function Constructor(menu) {
         this.json = menu;
         this.el = $(render(menu));
         var that = this;
@@ -60,7 +49,7 @@ define(['text!./sidebar-menu/base.html', 'text!./sidebar-menu/group.html', 'text
          * To select a group child, pass "group_id.child_id".
          * @param {String} id
          */
-        select: function(id){
+        select: function(id) {
             $('li,div', this.el).removeClass('active');
             var $link_el = $('a[data-id="'+id+'"]');
             $link_el.parent().addClass('active');
@@ -73,11 +62,10 @@ define(['text!./sidebar-menu/base.html', 'text!./sidebar-menu/group.html', 'text
          * @param {String} id
          * @return {String}
          */
-        get_label: function(id){
+        get_label: function(id) {
             return $('a[data-id="' + id + '"]', this.el).text();
         }
     }
-
 
     return Constructor;
 });
