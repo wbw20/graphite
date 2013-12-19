@@ -17,6 +17,16 @@ body {
   text-align: center;
 }
 
+#store {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#projects {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .menu div:hover {
   background-color: #e0e0e0;
 }
