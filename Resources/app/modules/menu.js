@@ -10,6 +10,7 @@ define(['text!./menu/menu.html', 'text!./menu/item.html'], function(menu, item) 
                 name: name
             }));
 
+            /* Handle menu item highlighting */
             item_el.on('click', function(event) {
                 $('.selected').removeClass('selected');
                 $($(event.currentTarget).children()[0]).addClass('selected'); // TODO:  not this
@@ -19,19 +20,6 @@ define(['text!./menu/menu.html', 'text!./menu/item.html'], function(menu, item) 
         });
 
         _.extend(this, Backbone.Events);
-    }
-
-    Constructor.prototype = {
-        el: null,
-
-        /**
-         * Returns the label of a menu item.
-         * @param {String} id
-         * @return {String}
-         */
-        get_label: function(id) {
-            return $('a[data-id="' + id + '"]', this.el).text();
-        }
     }
 
     return Constructor;
