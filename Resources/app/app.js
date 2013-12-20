@@ -6,9 +6,18 @@
  */
 
 define(['modules/menu', 'text!../demos/apps.json'], function (Menu, apps) {
-    var menu = new Menu(JSON.parse(apps));
+    var menu = new Menu();
+
+    JSON.parse(apps);
 
     $('body').append(menu.el);
+
+    /*
+     *  Homebrew Router
+     */
+    menu.on('click', function(event) {
+        alert('the routing works');
+    });
 
     // //Basically, the whole app is controlled with the sidebar module.
     // sidebar_menu.on('select', function (id) {

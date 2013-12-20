@@ -30,6 +30,10 @@ body {
   background-color: #e0e0e0;
 }
 
+.selected {
+  background-color: #e0e0e0;
+}
+
 .menu * {
   cursor: pointer;
 }
