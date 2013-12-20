@@ -11,7 +11,7 @@ define(['text!./menu/menu.html', 'text!./menu/item.html'], function(menu, item) 
             }));
 
             item_el.on('click', function(event) {
-                $('selected').removeClass('selected');
+                $('.selected').removeClass('selected');
                 $($(event.currentTarget).children()[0]).addClass('selected'); // TODO:  not this
             });
 
