@@ -5,18 +5,26 @@
  * Create a new demo in the `/demos/` folder and make sure to add it to `/demo-index.json`
  */
 
-define(['modules/menu', 'text!../demos/apps.json'], function (Menu, apps) {
+define(['modules/menu', 'modules/grid', 'text!../demos/apps.json'], function (Menu, Grid, apps) {
     var menu = new Menu();
+
+    $('#content').on('route', function(event, options) {
+        $.extend({
+            route: 'store'
+        }, options); // store is default route
+
+
+        var grid = new Grid();
+    });
 
     JSON.parse(apps);
 
-    $('body').append(menu.el);
+    // $('body').append(menu.el);
 
     /*
      *  Homebrew Router
      */
     menu.on('click', function(event) {
-        alert('the routing works');
     });
 
     // //Basically, the whole app is controlled with the sidebar module.

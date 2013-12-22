@@ -14,6 +14,9 @@ define(['text!./menu/item.html'], function(item) {
             item_el.on('click', function(event) {
                 $('.selected').removeClass('selected');
                 $($(event.currentTarget).children()[0]).addClass('selected'); // TODO:  not this
+                $('#content').trigger('route', {
+                    route: 'store'
+                });
             });
 
             self.el.append(item_el);
