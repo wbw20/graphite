@@ -1,5 +1,5 @@
-define(['text!./menu/menu.html', 'text!./menu/item.html'], function(menu, item) {
-    var menu_el = $(menu),
+define(['text!./menu/item.html'], function(item) {
+    var menu_el = $('.menu'),
         create_item = _.template(item);
 
     function Constructor(menu) {
