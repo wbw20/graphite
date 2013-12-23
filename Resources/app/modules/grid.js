@@ -20,7 +20,25 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
         });
 
         $(window).on('resize', function(event) {
-            console.log(grid_el.width());
+            var width = $('#content').width(),
+                unit = $('.grid_item').first().width(),
+                num_columns = Math.floor(width/unit),
+                el = '<tr>';
+
+            console.log(num_columns);
+
+            for (var i = 0; i < items.length; i++) {
+                if (i % num_columns === 0) {
+                    // new row
+                    el = el + '</tr><tr>';
+                }
+
+                el = el + '<td><div class=\'grid_item animated\'>BLAHBLAH</div></td>';
+            }
+
+            el = el + '</tr>'
+
+            $('#grid').empty().append(el);
         });
 
         _.extend(this, Backbone.Events);
