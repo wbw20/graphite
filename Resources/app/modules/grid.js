@@ -25,8 +25,6 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
                 num_columns = Math.floor(width/unit),
                 el = '<tr>';
 
-            console.log(num_columns);
-
             for (var i = 0; i < items.length; i++) {
                 if (i % num_columns === 0) {
                     // new row
