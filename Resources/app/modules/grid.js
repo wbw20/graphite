@@ -1,11 +1,12 @@
-define(['text!./grid/item.html'], function(item) {
-    var grid_el = $('#content'),
-        create_item = _.template(item);
+define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) {
+    var grid_el = $(grid),
+        create_item = _.template(item),
+        items = ['plane', 'train', 'robot', 'spam', 'rocket', 'boat', 'rc turret', 'helicopter'];
 
-    function Constructor() {
-        this.el = $(grid_el);
+    function Grid() {
+        this.el = grid_el;
         var self = this;
-        ['Store', 'My Apps', 'Devices', 'Projects'].forEach(function(name) {
+        items.forEach(function(name) {
             var item_el = $(create_item({
                 name: name
             }));
@@ -18,8 +19,12 @@ define(['text!./grid/item.html'], function(item) {
             self.el.append(item_el);
         });
 
+        $(window).on('resize', function(event) {
+            console.log(grid_el.width());
+        });
+
         _.extend(this, Backbone.Events);
     }
 
-    return Constructor;
+    return Grid;
 });

@@ -48,6 +48,16 @@ body {
   background-color: blue;
 }
 
+#content {
+  height: 100%;
+  width: 100%;
+}
+
+#content table {
+  height: 100%;
+  width: 100%;
+}
+
 .light {
   color: #F0F0F0;
 }

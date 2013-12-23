@@ -7,14 +7,13 @@
 
 define(['modules/menu', 'modules/grid', 'text!../demos/apps.json'], function (Menu, Grid, apps) {
     var menu = new Menu();
+    var grid = new Grid();
+    $('#content').append(grid.el);
 
     $('#content').on('route', function(event, options) {
         $.extend({
             route: 'store'
         }, options); // store is default route
-
-
-        var grid = new Grid();
     });
 
     JSON.parse(apps);
