@@ -7,23 +7,19 @@
 
 define(['modules/menu', 'modules/grid', 'text!../demos/apps.json'], function (Menu, Grid, apps) {
     var menu = new Menu();
-    var grid = new Grid();
-    $('#content').append(grid.el);
 
+    /* Homebrew Router */
     $('#content').on('route', function(event, options) {
         $.extend({
             route: 'store'
         }, options); // store is default route
-    });
 
-    JSON.parse(apps);
-
-    // $('body').append(menu.el);
-
-    /*
-     *  Homebrew Router
-     */
-    menu.on('click', function(event) {
+        if(options.route === 'store') {
+            var grid = new Grid();
+            $('#content').empty().append(grid.el);
+        } else {
+            $('#content').empty();
+        }
     });
 
     // //Basically, the whole app is controlled with the sidebar module.

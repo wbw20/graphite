@@ -15,7 +15,7 @@ define(['text!./menu/item.html'], function(item) {
                 $('.selected').removeClass('selected');
                 $($(event.currentTarget).children()[0]).addClass('selected'); // TODO:  not this
                 $('#content').trigger('route', {
-                    route: 'store'
+                    route: name.replace(' ', '').toLowerCase()
                 });
             });
 
