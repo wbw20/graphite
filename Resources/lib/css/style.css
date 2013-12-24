@@ -51,7 +51,7 @@ body {
 
 .grid_item {
   height: 200px;
-  width: 200px;
+  width: 100%;
   background-color: blue;
 }
 
@@ -69,6 +69,7 @@ body {
 }
 
 #content table {
+
   margin: 0px auto 0px auto;
 }
 

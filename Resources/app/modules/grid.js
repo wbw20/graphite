@@ -1,36 +1,40 @@
 define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) {
-    var create_item = _.template(item),
+    var max_width = 330,
+        min_width = 260,
+        create_item = _.template(item),
         items = ['plane', 'train', 'robot', 'spam', 'rocket', 'boat', 'rc turret', 'helicopter'];
 
     function Grid() {
         this.el = el = $(grid);
-        el.append($(_render()));
+        el.append($(_render(3)));
 
         $(window).on('resize', function(event) {
-            console.log(el);
-            console.log(_render());
-            el.empty().append(_render());
+            if ($('.grid_item').width() >= max_width || $('.grid_item').width() <= min_width) {
+                el.empty().append(_render(Math.ceil($('#content').width()/max_width)));
+            }
         });
 
         _.extend(this, Backbone.Events);
     }
 
-    _render = function() {
-        var width = $('#content').width(),
-            unit = 200,
-            num_columns = Math.floor(width/unit),
-            el = '<tr>';
+    _render = function(num_columns) {
+        console.log(num_columns);
+        var el = '<tr>';
 
-        for (var i = 0; i < items.length; i++) {
+        for (var i = 1; i <= items.length; i++) {
             if (i % num_columns === 0) {
                 // new row
                 el = el + '</tr><tr>';
             }
 
-            el = el + '<td><div class=\'grid_item animated\'>BLAHBLAH</div></td>';
+            el = el + '<td><div class=\'grid_item animated\'>BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH</div></td>';
         }
 
-        el = el + '</tr>'
+        el = el + '</tr>';
+
+        // $('.grid_item').css('width', Math.min($('#content').width()/num_columns, max_width));
+
+        // console.log($('#content').width()/num_columns);
 
         return el;
     }
