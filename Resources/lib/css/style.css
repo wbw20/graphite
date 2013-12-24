@@ -69,8 +69,11 @@ body {
 }
 
 #content table {
-
+  width: 100%;
   margin: 0px auto 0px auto;
+}
+
+#content td {
 }
 
 .light {

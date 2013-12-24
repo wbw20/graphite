@@ -21,13 +21,13 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
         console.log(num_columns);
         var el = '<tr>';
 
-        for (var i = 1; i <= items.length; i++) {
+        for (var i = 0; i < items.length; i++) {
             if (i % num_columns === 0) {
                 // new row
                 el = el + '</tr><tr>';
             }
 
-            el = el + '<td><div class=\'grid_item animated\'>BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH</div></td>';
+            el = el + '<td><div class=\'grid_item animated\'>|</div></td>';
         }
 
         el = el + '</tr>';
