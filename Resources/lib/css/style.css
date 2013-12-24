@@ -50,7 +50,7 @@ body {
 }
 
 .grid_item {
-  height: 200px;
+  height: 120px;
   width: 100%;
   background-color: blue;
 }
