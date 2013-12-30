@@ -8,6 +8,15 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
         this.el = el = $(grid);
         el.append($(_render(3)));
 
+        el.find('h6').on('mouseenter', function(event) {
+            $(this).data('prev', $(this).text());
+            $(this).text('INSTALL');
+        });
+
+        el.find('h6').on('mouseleave', function(event) {
+            $(this).text($(this).data('prev'));
+        });
+
         $(window).on('resize', function(event) {
             if ($('.grid_item').width() >= max_width || $('.grid_item').width() <= min_width) {
                 el.empty().append(_render(Math.ceil($('#content').width()/max_width)));
@@ -27,7 +36,8 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
             }
 
             el = el + create_item({
-                name: items[i]
+                name: items[i],
+                price: 'free'
             });
         }
 
