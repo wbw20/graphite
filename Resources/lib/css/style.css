@@ -9,6 +9,7 @@ body {
   margin: 0px auto 0px auto;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  overflow: hidden;
 }
 
 .menu div {
@@ -16,14 +17,6 @@ body {
   height: 100%;
   float: left;
   text-align: center;
-}
-
-#store {
-  border-bottom-left-radius: 5px;
-}
-
-#projects {
-  border-bottom-right-radius: 5px;
 }
 
 .menu div:hover {
