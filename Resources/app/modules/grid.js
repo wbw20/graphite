@@ -18,7 +18,6 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
     }
 
     _render = function(num_columns) {
-        console.log(num_columns);
         var el = '<tr>';
 
         for (var i = 0; i < items.length; i++) {
@@ -27,7 +26,9 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
                 el = el + '</tr><tr>';
             }
 
-            el = el + '<td><div class=\'grid_item animated\'>|</div></td>';
+            el = el + create_item({
+                name: items[i]
+            });
         }
 
         el = el + '</tr>';
