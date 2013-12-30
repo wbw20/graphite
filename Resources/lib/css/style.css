@@ -68,6 +68,7 @@ tr.dark {
   width: 100%;
   margin: 50px auto 50px auto;
   border: 2px solid #c2c2c2;
+  table-layout: fixed;
 }
 
 #content tr:last-child {
