@@ -18,12 +18,12 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
     }
 
     _render = function(num_columns) {
-        var el = '<tr>';
+        var el = '<tr class=\"dark\">';
 
         for (var i = 0; i < items.length; i++) {
             if (i % num_columns === 0) {
                 // new row
-                el = el + '</tr><tr>';
+                el = el + '</tr><tr class=\"' + (i%2==0 ? 'light' : 'dark') + '\">';
             }
 
             el = el + create_item({

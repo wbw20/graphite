@@ -44,8 +44,18 @@ body {
 
 .grid_item {
   height: 120px;
-  width: 100%;
-  background-color: blue;
+}
+
+.grid_item h3 {
+  color: #818181;
+}
+
+tr.light {
+  background-color: #d8d8d8;
+}
+
+tr.dark {
+  background-color: #e0e0e0;
 }
 
 #content {
