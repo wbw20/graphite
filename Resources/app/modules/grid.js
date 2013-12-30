@@ -2,7 +2,7 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
     var max_width = 330,
         min_width = 260,
         create_item = _.template(item),
-        items = ['plane', 'train', 'robot', 'spam', 'rocket', 'boat', 'rc turret', 'helicopter'];
+        items = ['Plane', 'Train', 'Robot', 'Spam', 'Rocket', 'Boat', 'RC Turret', 'Helicopter', 'LED'];
 
     function Grid() {
         this.el = el = $(grid);
@@ -21,7 +21,7 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
         var el = '<tr class=\"light\">';
 
         for (var i = 0; i < items.length; i++) {
-            if (i % num_columns === 0) {
+            if (Math.max(1, i) % num_columns === 0) {
                 // new row
                 el = el + '</tr><tr class=\"' + ((i/num_columns)%2==0 ? 'light' : 'dark') + '\">';
             }
