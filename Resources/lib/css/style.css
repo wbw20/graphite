@@ -42,13 +42,6 @@ body {
   margin-top: 10px;
 }
 
-.header {
-  height: 200px;
-  margin-top: 50px;
-  background-color: red;
-  border-radius: 5px;
-}
-
 .grid_item {
   height: 120px;
   width: 100%;
@@ -90,7 +83,11 @@ body {
 
 /* Store Assets */
 .banner {
-
+  height: 300px;
+  margin-top: 50px;
+  border-radius: 5px;
+  background-height: 300px;
+  background-size: 100%;
 }
 
 .helicopter {
