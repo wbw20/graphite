@@ -81,7 +81,7 @@ tr.dark {
 
 #content {
   height: 100%;
-  padding: 0px 50px 0px 50px;
+  padding: 0px 50px 50px 50px;
 }
 
 #content table, tr, td {
@@ -92,10 +92,15 @@ tr.dark {
   margin: 0;
 }
 
-#content table {
+#content > div {
   width: 100%;
   margin: 50px auto 50px auto;
   border: 1px solid #aeaeae;
+  overflow: hidden;
+}
+
+#content table {
+  width: 100%;
   table-layout: fixed;
 }
 

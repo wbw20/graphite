@@ -5,7 +5,7 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
         items = ['Plane', 'Train', 'Robot', 'Spam', 'Rocket', 'Boat', 'RC Turret', 'Helicopter', 'LED'];
 
     function Grid() {
-        this.el = el = $(grid);
+        this.el = el = $(grid).find('table');
         el.append($(_render(3)));
 
         el.find('h6').on('mouseenter', function(event) {
