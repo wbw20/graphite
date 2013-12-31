@@ -1,11 +1,11 @@
-define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) {
+define(['text!./grid/grid.html', 'text!./grid/item.html', 'text!./grid/panel.html'], function(grid, item, panel) {
     var max_width = 330,
         min_width = 260,
         create_item = _.template(item),
         items = ['Plane', 'Train', 'Robot', 'Spam', 'Rocket', 'Boat', 'RC Turret', 'Helicopter', 'LED'];
 
     function Grid() {
-        this.el = el = $(grid).find('table');
+        var el = $(grid);
         el.append($(_render(3)));
 
         el.find('h6').on('mouseenter', function(event) {
@@ -22,6 +22,8 @@ define(['text!./grid/grid.html', 'text!./grid/item.html'], function(grid, item) 
                 el.empty().append(_render(Math.ceil($('#content').width()/max_width)));
             }
         });
+
+        this.el = $(panel).append(el);
 
         _.extend(this, Backbone.Events);
     }

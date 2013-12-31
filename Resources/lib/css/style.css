@@ -92,24 +92,17 @@ tr.dark {
   margin: 0;
 }
 
-#content > div {
+.panel {
   width: 100%;
-  margin: 50px auto 50px auto;
+  margin: 50px auto 0px auto;
   border: 1px solid #aeaeae;
+  border-radius: 5px;
   overflow: hidden;
 }
 
 #content table {
   width: 100%;
   table-layout: fixed;
-}
-
-#content tr:last-child {
-  border-bottom: 1px solid #aeaeae;
-}
-
-#content tr:first-child {
-  border-top: 1px solid #aeaeae;
 }
 
 #content tr {
