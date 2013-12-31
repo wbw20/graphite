@@ -43,6 +43,12 @@ body {
 .grid_item h4 {
   font-weight: 400;
   color: black;
+  margin-bottom: 0px;
+}
+
+.grid_item > div > h6 {
+  color: #818181;
+  margin: 0px;
 }
 
 .install {

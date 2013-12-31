@@ -8,12 +8,12 @@ define(['text!./grid/grid.html', 'text!./grid/item.html', 'text!./grid/panel.htm
         var el = $(grid);
         el.append($(_render(3)));
 
-        el.find('h6').on('mouseenter', function(event) {
+        el.find('.install h6').on('mouseenter', function(event) {
             $(this).data('prev', $(this).text());
             $(this).text('INSTALL');
         });
 
-        el.find('h6').on('mouseleave', function(event) {
+        el.find('.install h6').on('mouseleave', function(event) {
             $(this).text($(this).data('prev'));
         });
 
@@ -39,6 +39,7 @@ define(['text!./grid/grid.html', 'text!./grid/item.html', 'text!./grid/panel.htm
 
             el = el + create_item({
                 name: items[i],
+                type: 'utility',
                 price: 'free'
             });
         }
