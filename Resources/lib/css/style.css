@@ -100,6 +100,13 @@ tr.dark {
   overflow: hidden;
 }
 
+.panel .top {
+  background-image: url('/lib/img/gradient.png');
+  margin: -5px 0px -10px 0px;
+  padding: 3px 0px 0px 30px;
+  height: 50px;
+}
+
 #content table {
   width: 100%;
   table-layout: fixed;
