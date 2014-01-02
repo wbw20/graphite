@@ -12,13 +12,20 @@ define(['modules/menu',
         }, options); // store is default route
 
         if(options.route === 'store') {
-            $('#header').empty().append(new Header().el);
-            $('#left_pane').empty().append(new Grid().el);
-            $('#right_pane').empty().append(new Popular().el);
-        } else {
-            $('#header').empty();
-            $('#left_pane').empty();
-            $('#right_pane').empty();
+            _empty().append('<div id="header"></div><table id="panes"><tr><td id="left_pane"></td><td id="right_pane"></td></tr><table>'); //CES HACK
+            $('#header').append(new Header().el);
+            $('#left_pane').append(new Grid().el);
+            $('#right_pane').append(new Popular().el);
+        } else if(options.route === 'myapps') {
+            _empty();
+        } else if(options.route === 'devices') {
+            _empty();
+        } else if(options.route === 'projects') {
+            _empty();
         }
     });
 });
+
+function _empty () {
+    return $('#content').empty();
+}
