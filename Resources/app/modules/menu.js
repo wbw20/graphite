@@ -3,7 +3,7 @@ define(['text!./menu/item.html'], function(item) {
         create_item = _.template(item);
 
     function Constructor(menu) {
-        this.el = $(menu_el);
+        this.el = menu_el;
         var self = this;
         ['Store', 'My Apps', 'Devices', 'Projects'].forEach(function(name) {
             var item_el = $(create_item({
