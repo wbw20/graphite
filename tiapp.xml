@@ -14,10 +14,10 @@
 <id>initial</id>
 <title>Graphite</title>
 <url>app://index.html</url>
-<width>900</width>
+<width>1000</width>
 <max-width>3000</max-width>
 <min-width>700</min-width>
-<height>600</height>
+<height>700</height>
 <max-height>3000</max-height>
 <min-height>500</min-height>
 <fullscreen>false</fullscreen>

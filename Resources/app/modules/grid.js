@@ -19,7 +19,7 @@ define(['text!./grid/grid.html', 'text!./grid/item.html', 'text!./grid/panel.htm
 
         $(window).on('resize', function(event) {
             if ($('.grid_item').width() >= max_width || $('.grid_item').width() <= min_width) {
-                el.empty().append(_render(Math.ceil($('#content').width()/max_width)));
+                el.empty().append(_render(Math.ceil($('#left_pane').width()/max_width)));
             }
         });
 
@@ -28,7 +28,7 @@ define(['text!./grid/grid.html', 'text!./grid/item.html', 'text!./grid/panel.htm
         _.extend(this, Backbone.Events);
     }
 
-    _render = function(num_columns) {
+    function _render(num_columns) {
         var el = '<tr class=\"light\">';
 
         for (var i = 0; i < items.length; i++) {

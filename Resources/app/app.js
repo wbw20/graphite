@@ -5,7 +5,11 @@
  * Create a new demo in the `/demos/` folder and make sure to add it to `/demo-index.json`
  */
 
-define(['modules/menu', 'modules/grid', 'modules/header', 'text!../demos/apps.json'], function (Menu, Grid, Header, apps) {
+define(['modules/menu',
+        'modules/grid',
+        'modules/popular',
+        'modules/header',
+        'text!../demos/apps.json'], function (Menu, Grid, Popular, Header, apps) {
     var menu = new Menu();
 
     /* Homebrew Router */
@@ -15,10 +19,12 @@ define(['modules/menu', 'modules/grid', 'modules/header', 'text!../demos/apps.js
         }, options); // store is default route
 
         if(options.route === 'store') {
-            $('#content').empty().append(new Header().el);
-            $('#content').append(new Grid().el);
+            $('#left_pane').empty().append(new Header().el);
+            $('#left_pane').append(new Grid().el);
+            $('#right_pane').empty().append(new Popular().el);
         } else {
-            $('#content').empty();
+            $('#left_pane').empty();
+            $('#right_pane').empty();
         }
     });
 
