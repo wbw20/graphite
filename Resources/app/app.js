@@ -19,8 +19,8 @@ define(['modules/menu',
         }, options); // store is default route
 
         if(options.route === 'store') {
-            $('#left_pane').empty().append(new Header().el);
-            $('#left_pane').append(new Grid().el);
+            $('#header').empty().append(new Header().el);
+            $('#left_pane').empty().append(new Grid().el);
             $('#right_pane').empty().append(new Popular().el);
         } else {
             $('#left_pane').empty();
