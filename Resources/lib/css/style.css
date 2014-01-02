@@ -163,6 +163,15 @@ ul.popular {
   background-image: url('/lib/img/widescreen_gloss.png'), url('/lib/img/apps/led.png');
   background-size: 100%;
   border-radius: 5px;
+  overflow: hidden;
+  padding-top: -10px;
+}
+
+.popular li > div  h5 {
+  font-weight: 300;
+  font-size: 24px;
+  color: black;
+  margin-left: 10px;
 }
 
 .light {
@@ -183,6 +192,7 @@ ul.popular {
   border-radius: 5px;
   background-height: 300px;
   background-size: 100%;
+  -webkit-box-shadow: 3px 3px 2px 0px #ccc;
 }
 
 .icon {
