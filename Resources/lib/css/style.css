@@ -159,8 +159,10 @@ ul.popular {
 
 .popular li > div {
   height: 100px;
-  width: 100px;
-  background-color: green;
+  width: 130px;
+  background-image: url('/lib/img/widescreen_gloss.png'), url('/lib/img/apps/led.png');
+  background-size: 100%;
+  border-radius: 5px;
 }
 
 .light {
