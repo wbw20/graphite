@@ -213,3 +213,10 @@ ul.popular {
 .helicopter {
   background-image: url('/lib/img/apps/helicopter.png');
 }
+
+/* Device Page */
+.device {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
