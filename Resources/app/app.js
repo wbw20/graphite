@@ -23,6 +23,7 @@ define(['modules/menu',
             $('#left_pane').empty().append(new Grid().el);
             $('#right_pane').empty().append(new Popular().el);
         } else {
+            $('#header').empty();
             $('#left_pane').empty();
             $('#right_pane').empty();
         }
