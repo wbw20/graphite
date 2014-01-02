@@ -4,22 +4,26 @@ body {
 
 .menu {
   background-color: #d8d8d8;
+  position: fixed;
+  top: 0px;
   height: 40px;
-  width: 500px;
-  margin: 0px auto 0px auto;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  overflow: hidden;
+  width: 100%;
+  border-bottom: 2px solid #818181;
 }
 
-.menu div {
-  width: 25%;
+.menu .container {
+  width: 400px;
+  margin: 0px auto 0px auto;
+}
+
+.menu .container div {
+  width: 100px;
   height: 100%;
   float: left;
   text-align: center;
 }
 
-.menu div:hover {
+.menu .container div:hover {
   background-color: #e0e0e0;
 }
 
@@ -31,7 +35,7 @@ body {
   cursor: pointer;
 }
 
-.menu div > h5 {
+.menu .container div > h5 {
   margin-top: 10px;
 }
 

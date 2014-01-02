@@ -1,5 +1,5 @@
 define(['text!./menu/item.html'], function(item) {
-    var menu_el = $('.menu'),
+    var menu_el = $('.menu .container'),
         create_item = _.template(item);
 
     function Constructor(menu) {
@@ -14,7 +14,7 @@ define(['text!./menu/item.html'], function(item) {
             item_el.on('click', function(event) {
                 $('.selected').removeClass('selected');
                 $($(event.currentTarget).children()[0]).addClass('selected'); // TODO:  not this
-                $('#content').trigger('route', {
+                $('#left_pane').trigger('route', {
                     route: name.replace(' ', '').toLowerCase()
                 });
             });
