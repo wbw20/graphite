@@ -1,6 +1,6 @@
 define(['text!./popular/popular.html', 'text!./popular/item.html'], function(popular, item) {
     var create_item = _.template(item),
-        items = ['Lightz', 'Radio', 'Apply'];
+        items = ['Lightz', 'Radio', 'Apply', 'Quiz', 'GPS', 'Random'];
 
     function Popular() {
         this.el = $(popular);
