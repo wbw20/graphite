@@ -90,7 +90,7 @@ body {
 .install:hover {
   background-color: #6c9200;
   width: 75px;
-  -webkit-transition: width 0.5s;
+  -webkit-transition: width 0.25s;
 }
 
 tr.light {

@@ -8,13 +8,13 @@ define(['text!./grid/grid.html', 'text!./grid/item.html', 'text!./grid/panel.htm
         var el = $(grid);
         el.append($(_render(3)));
 
-        el.find('.install h6').on('mouseenter', function(event) {
+        el.find('.install').on('mouseenter', function(event) {
             $(this).data('prev', $(this).text());
-            $(this).text('INSTALL');
+            $(this).find('h6').text('INSTALL');
         });
 
-        el.find('.install h6').on('mouseleave', function(event) {
-            $(this).text($(this).data('prev'));
+        el.find('.install').on('mouseleave', function(event) {
+            $(this).find('h6').text($(this).data('prev'));
         });
 
         $(window).on('resize', function(event) {
