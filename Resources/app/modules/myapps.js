@@ -1,4 +1,4 @@
-define(['text!./myapps/myapps.html', 'text!./popular/item.html'], function(myapps, item) {
+define(['text!./myapps/myapps.html', 'text!./myapps/item.html'], function(myapps, item) {
     var create_item = _.template(item),
         items = ['Lightz', 'Helicopter', 'Apply'];
 
