@@ -245,6 +245,11 @@ ul.popular {
 
 #feature {
   float: left;
+  padding-left: 100px;
+}
+
+#feature h5 {
+  color: #696969;
 }
 
 /* My Apps Page */
