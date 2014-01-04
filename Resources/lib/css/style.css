@@ -217,6 +217,7 @@ ul.popular {
 /* Device Page */
 .devices {
   list-style-type: none;
+  border: 1px solid #757575;;
   margin: 0px;
   width: 200px;
 }
@@ -226,14 +227,15 @@ ul.popular {
   -webkit-transition: background-color .5s;
 }
 
+.device:first-child {
+  border-top: none;
+}
+
 .device {
   background-color: #ABABAB;
   border-top: 1px solid #696969;
-  border-left: 1px solid #757575;
-  border-right: 1px solid #757575;
   padding: 25px;
   height: 100px;
-  width: 100%;
 }
 
 /* My Apps Page */
