@@ -215,9 +215,24 @@ ul.popular {
 }
 
 /* Device Page */
+.devices {
+  list-style-type: none;
+  margin: 0px;
+  width: 200px;
+}
+
+.devices .selected {
+  background-color: #cccccc;
+  -webkit-transition: background-color .5s;
+}
+
 .device {
-  background-color: black;
-  height: 100%;
+  background-color: #ABABAB;
+  border-top: 1px solid #696969;
+  border-left: 1px solid #757575;
+  border-right: 1px solid #757575;
+  padding: 25px;
+  height: 100px;
   width: 100%;
 }
 

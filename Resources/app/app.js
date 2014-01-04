@@ -4,7 +4,7 @@ define(['modules/menu',
         'modules/myapps',
         'modules/popular',
         'modules/header',
-        'text!../demos/apps.json'], function (Menu, Grid, Device, MyApps, Popular, Header, apps) {
+        'text!../demos/apps.json'], function (Menu, Grid, Devices, MyApps, Popular, Header, apps) {
     var menu = new Menu();
 
     /* Homebrew Router */
@@ -21,7 +21,7 @@ define(['modules/menu',
         } else if(options.route === 'myapps') {
             _empty().append(new MyApps().el);
         } else if(options.route === 'devices') {
-            _empty().append(new Device().el);
+            _empty().append(new Devices().el);
         } else if(options.route === 'projects') {
             _empty();
         }
