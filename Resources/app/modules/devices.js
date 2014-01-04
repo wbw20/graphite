@@ -31,11 +31,12 @@ define(['text!./devices/devices.html',
 
     Devices.prototype.select = function(device) {
         var el = $(device);
+        var item = _by(el.attr('id'));
         $('.devices .selected').removeClass('selected');
         el.addClass('selected');
-        $('#feature').empty().append(create_feature({
-          test: 'tests'
-        }));
+        $('#feature').empty().append(create_feature($.extend(item, {
+          last: 'yesterday'
+        })));
     }
 
     function _render() {
@@ -55,10 +56,10 @@ define(['text!./devices/devices.html',
       return name.replace(' ', '').toLowerCase();
     }
 
-    function by(name) {
+    function _by(id) {
       for (var i = 0; i< items.length; i++) {
-        if (name === items[i].name) {
-          return name;
+        if (id === _id(items[i].name)) {
+          return items[i];
         }
       }
     }
