@@ -220,6 +220,7 @@ ul.popular {
   border: 1px solid #757575;;
   margin: 0px;
   width: 200px;
+  float: left;
 }
 
 .devices .selected {
@@ -236,6 +237,14 @@ ul.popular {
   border-top: 1px solid #696969;
   padding: 25px;
   height: 100px;
+}
+
+.devices * {
+  cursor: pointer;
+}
+
+#feature {
+  float: left;
 }
 
 /* My Apps Page */

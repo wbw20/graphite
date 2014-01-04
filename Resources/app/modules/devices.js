@@ -1,10 +1,25 @@
-define(['text!./devices/devices.html', 'text!./devices/item.html'], function(devices, item) {
+define(['text!./devices/devices.html',
+        'text!./devices/feature.html',
+        'text!./devices/item.html'], function(devices, feature, item) {
     var create_item = _.template(item),
-        items = ['Graphite 1', 'Graphite 2', 'Graphite 3'];
+        create_feature = _.template(feature),
+        items = [{
+            name: 'Graphite 1',
+            last: 1388864816,
+            type: 'Graphite'
+        }, {
+            name: 'Graphite 2',
+            last: 1388804816,
+            type: 'Graphite'
+        }, {
+            name: 'Graphite 3',
+            last: 1388064816,
+            type: 'Graphite'
+        }];
 
     function Devices() {
         this.el = $(devices);
-        this.el.append($(_render()));
+        this.el.find('ul').append($(_render()));
 
         var self = this;
         this.el.find('li').on('click', function(event) {
@@ -18,6 +33,9 @@ define(['text!./devices/devices.html', 'text!./devices/item.html'], function(dev
         var el = $(device);
         $('.devices .selected').removeClass('selected');
         el.addClass('selected');
+        $('#feature').empty().append(create_feature({
+          test: 'tests'
+        }));
     }
 
     function _render() {
@@ -25,8 +43,8 @@ define(['text!./devices/devices.html', 'text!./devices/item.html'], function(dev
 
         for (var i = 0; i < items.length; i++) {
             el = el + create_item({
-                id: _id(items[i]),
-                name: items[i]
+                id: _id(items[i].name),
+                name: items[i].name
             });
         }
 
@@ -35,6 +53,14 @@ define(['text!./devices/devices.html', 'text!./devices/item.html'], function(dev
 
     function _id(name) {
       return name.replace(' ', '').toLowerCase();
+    }
+
+    function by(name) {
+      for (var i = 0; i< items.length; i++) {
+        if (name === items[i].name) {
+          return name;
+        }
+      }
     }
 
     return Devices;
