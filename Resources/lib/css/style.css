@@ -114,8 +114,11 @@ tr.dark {
   margin: 0;
 }
 
-.panel {
+#left_pane .panel {
   width: 100%;
+}
+
+.panel {
   margin: 0px auto 0px auto;
   border: 1px solid #aeaeae;
   border-radius: 5px;
@@ -215,12 +218,16 @@ ul.popular {
 }
 
 /* Device Page */
+.devices-container .panel {
+  float: left;
+  width: 200px;
+}
+
 .devices {
   list-style-type: none;
   border: 1px solid #757575;;
   margin: 0px;
   width: 200px;
-  float: left;
 }
 
 .devices .selected {
