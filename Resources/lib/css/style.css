@@ -200,6 +200,7 @@ ul.popular {
 /* Store Assets */
 .banner {
   height: 300px;
+  margin-left: 200px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background-size: 100% 300px;
@@ -218,7 +219,7 @@ ul.popular {
 .mini_banners div {
   height: 100px;
   width: 200px;
-  background-color: red;
+  background-size: 100% 100px;
 }
 
 .icon {
@@ -234,6 +235,10 @@ ul.popular {
 
 .gps_pro {
   background-image: url('/lib/img/apps/gps_pro.png');
+}
+
+.led_banner {
+  background-image: url('/lib/img/apps/led_banner.png');
 }
 
 .gps_pro h1 {
