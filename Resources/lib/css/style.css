@@ -201,7 +201,6 @@ ul.popular {
 .banner {
   height: 300px;
   margin-left: 200px;
-  border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background-size: 100% 300px;
   -webkit-box-shadow: 3px 3px 2px 0px #ccc;
@@ -211,7 +210,6 @@ ul.popular {
   float: left;
   width: 200px;
   -webkit-box-shadow: 0px 3px 2px 0px #ccc;
-  border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   overflow: hidden;
 }
@@ -239,6 +237,14 @@ ul.popular {
 
 .led_banner {
   background-image: url('/lib/img/apps/led_banner.png');
+}
+
+.sub {
+  background-image: url('/lib/img/apps/sub.png');
+}
+
+.fc_plus {
+  background-image: url('/lib/img/apps/fc_plus.png');
 }
 
 .gps_pro h1 {
